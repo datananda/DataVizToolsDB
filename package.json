@@ -1,0 +1,29 @@
+{
+  "name": "FriendFinder",
+  "version": "1.0.0",
+  "description": "University of Minnesota Coding Bootcamp - Week 14 HW Assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madeloux/FriendFinder.git"
+  },
+  "keywords": [],
+  "author": "Madeleine Filloux <mfilloux@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madeloux/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/madeloux/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0"
+  }
+}
