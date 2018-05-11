@@ -12,11 +12,17 @@ app.get("/api/friends", (req, res) => {
 
 app.post("/api/friends", (req, res) => {
     const newFriend = req.body;
-    const friend1 = friends[0];
-    const reducer = (acc, curVal, i) => acc + Math.abs(curVal - newFriend.scores[i]);
-    const friend1diff = friend1.scores.reduce(reducer, 0);
-    console.log(friend1diff);
+    const reduceToDiff = (acc, curVal, i) => acc + Math.abs(curVal - newFriend.scores[i]);
+    const reduceToClosest = (acc, curVal, i) => {
+        const diff = curVal.scores.reduce(reduceToDiff, 0);
+        if (diff < acc[0]) {
+            return [diff, i];
+        }
+        return acc;
+    };
+    const closestFriendIndex = friends.reduce(reduceToClosest, [50, -1])[1];
     friends.push(newFriend);
+    return res.json(friends[closestFriendIndex]);
 });
 
 module.exports = app;
