@@ -1,18 +1,19 @@
 const express = require("express");
+const path = require("path");
 const bodyParser = require("body-parser");
-const friends = require("../data/friends");
+const tools = require("../data/tools");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("/api/friends", (req, res) => {
-    res.json(friends);
+app.get("/api/tools", (req, res) => {
+    res.json(tools);
 });
 
-app.post("/api/friends", (req, res) => {
-    const newFriend = req.body;
-    const reduceToDiff = (acc, curVal, i) => acc + Math.abs(curVal - newFriend.scores[i]);
+app.post("/api/tools", (req, res) => {
+    const surveyResults = req.body.scores;
+    const reduceToDiff = (acc, curVal, i) => acc + Math.abs(curVal - surveyResults[i]);
     const reduceToClosest = (acc, curVal, i) => {
         const diff = curVal.scores.reduce(reduceToDiff, 0);
         if (diff < acc[0]) {
@@ -20,9 +21,8 @@ app.post("/api/friends", (req, res) => {
         }
         return acc;
     };
-    const closestFriendIndex = friends.reduce(reduceToClosest, [50, -1])[1];
-    friends.push(newFriend);
-    return res.json(friends[closestFriendIndex]);
+    const recommendedToolIndex = tools.reduce(reduceToClosest, [50, -1])[1];
+    return res.json(tools[recommendedToolIndex]);
 });
 
 module.exports = app;

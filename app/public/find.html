@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Viz Tools</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/bars-movie.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="row">
+                <a href="/" class="nav-brand">DVTDB</a>
+                <ul class="nav-links">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-list-alt"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="far fa-plus-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Find a Tool</h1>
+        <div class="row">
+            <div class="twelve columns">
+                <div class="usability">
+                    <h2>Usability</h2>
+                    <h3>How comfortable are you installing software, libraries, and packages on your computer?</h3>
+                    <select id="installation">
+                        <option value>...</option>
+                        <option value="1">I prefer software that installs itself.</option>
+                        <option value="2">I can use software installers but only for a specific operating system.</option>
+                        <option value="3">I'm willing to sign up online and use the browser to access a tool.</option>
+                        <option value="4">I feel comfortable doing some additional package configuration.</option>
+                        <option value="5">I am comfortable with command-line installations and complicated configurations.</option>
+                    </select>
+                    <h3>How willing are you to learn a new tool?</h3>
+                    <select id="learning">
+                        <option value></option>
+                        <option value="1">Learning a new tool is the last thing I want to do.</option>
+                        <option value="2">I'm willing to learn how to use a simple application.</option>
+                        <option value="3">I'm willing to learn how to use a complex application.</option>
+                        <option value="4">I'm up for learning a new programming language if there are plug-and-play examples I can leverage.</option>
+                        <option value="5">I'm up for learning the ins and outs of a new programming language.</option>
+                    </select>
+                </div>
+                <a class="button" href="#" id="find-button">
+                    <i class="fas fa-wrench"></i>
+                    Find My Perfect Tool
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="toolPic">
+            <h1 id="toolName"></h1>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/jquery.barrating.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#installation, #learning').barrating({
+                theme: "bars-movie"
+            });
+        });
+
+        $("#find-button").on("click", function () {
+            const surveyResults = $(".br-current").map(function () {
+                return $(this).data("ratingValue");
+            }).get();
+
+            console.log(surveyResults);
+            $.post("/api/tools", {
+                scores: surveyResults,
+            }).then((data) => {
+                console.log(data);
+                $("#toolName").text(data.name);
+                $("#toolPic").attr("src", data.photo);
+                $("#myModal").toggle();
+            });
+        });
+
+        $(".close").on("click", function () {
+            $("#myModal").toggle();
+        });
+    </script>
+</body>
+
+</html>
