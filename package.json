@@ -1,5 +1,5 @@
 {
-  "name": "FriendFinder",
+  "name": "DataVizToolsDB",
   "version": "1.0.0",
   "description": "University of Minnesota Coding Bootcamp - Week 14 HW Assignment",
   "main": "server.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madeloux/FriendFinder.git"
+    "url": "git+https://github.com/madeloux/DataVizToolsDB.git"
   },
   "keywords": [],
   "author": "Madeleine Filloux <mfilloux@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/madeloux/FriendFinder/issues"
+    "url": "https://github.com/madeloux/DataVizToolsDB/issues"
   },
-  "homepage": "https://github.com/madeloux/FriendFinder#readme",
+  "homepage": "https://github.com/madeloux/DataVizToolsDB#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
