@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require("path");
 const bodyParser = require("body-parser");
 const tools = require("../data/tools");
 
@@ -12,6 +11,10 @@ app.get("/api/tools", (req, res) => {
 });
 
 app.post("/api/tools", (req, res) => {
+    if ("name" in req.body) {
+        tools.push(req.body);
+        return res.status(200).end();
+    }
     const surveyResults = req.body.scores;
     const reduceToDiff = (acc, curVal, i) => acc + Math.abs(curVal - surveyResults[i]);
     const reduceToClosest = (acc, curVal, i) => {

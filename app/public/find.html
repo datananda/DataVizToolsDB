@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Data Viz Tools</title>
+    <title>DVTDB Find</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
         crossorigin="anonymous"></script>
@@ -27,12 +27,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="/tools">
                             <i class="far fa-list-alt"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="/tools/new">
                             <i class="far fa-plus-square"></i>
                         </a>
                     </li>
@@ -47,7 +47,7 @@
                 <div class="usability">
                     <h2>Usability</h2>
                     <h3>How comfortable are you installing software, libraries, and packages on your computer?</h3>
-                    <select id="installation">
+                    <select class="survey-options">
                         <option value>...</option>
                         <option value="1">I prefer software that installs itself.</option>
                         <option value="2">I can use software installers but only for a specific operating system.</option>
@@ -56,7 +56,7 @@
                         <option value="5">I am comfortable with command-line installations and complicated configurations.</option>
                     </select>
                     <h3>How willing are you to learn a new tool?</h3>
-                    <select id="learning">
+                    <select class="survey-options">
                         <option value></option>
                         <option value="1">Learning a new tool is the last thing I want to do.</option>
                         <option value="2">I'm willing to learn how to use a simple application.</option>
@@ -64,19 +64,119 @@
                         <option value="4">I'm up for learning a new programming language if there are plug-and-play examples I can leverage.</option>
                         <option value="5">I'm up for learning the ins and outs of a new programming language.</option>
                     </select>
+                    <h3>How much support do you need when learning something new?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">I like to submit tickets and receive prompt responses from the tool company.</option>
+                        <option value="2">I like to have contact with the tool company even if it isn't always fast.</option>
+                        <option value="3">I am comfortable seeking support from a strong user community.</option>
+                        <option value="4">I am comfortable using online resources alone for support.</option>
+                        <option value="5">I don't need much support when learning something new.</option>
+                    </select>
+                    <h3>How much are you willing to pay for a license?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">$0. Tools should be free.</option>
+                        <option value="2">I'm ok with a freemium model with an inexpensive monthly subscription.</option>
+                        <option value="3">I'm ok with a freemium model and tiered monthly subscriptions.</option>
+                        <option value="4">I'm willing to pay for a license but only if it's less than $1000.</option>
+                        <option value="5">My company is paying and they've got deep pockets...</option>
+                    </select>
                 </div>
-                <a class="button" href="#" id="find-button">
-                    <i class="fas fa-wrench"></i>
-                    Find My Perfect Tool
-                </a>
+                <div class="capability">
+                    <h2>Capability</h2>
+                    <h3>How much visualization variety do you want?</h3>
+                    <select class="survey-options">
+                        <option value>...</option>
+                        <option value="1">Being able to design anything I want is important to me.</option>
+                        <option value="2">I'd like to be able to make almost any visualization.</option>
+                        <option value="3">I'm ok with the 20 or so most common chart types.</option>
+                        <option value="4">I'm ok with the 10 or so most common chart types.</option>
+                        <option value="5">I will only use a handful of the most basic chart types.</option>
+                    </select>
+                    <h3>How many different data source types do you need to connect to?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">Being able to connect to any type of data source is important to me.</option>
+                        <option value="2">I will mostly use flat files, but might want to program a connection to a different data source.</option>
+                        <option value="3">I will mostly use Excel files, but might want to program a connection to a different data source.</option>
+                        <option value="4">I will only use Excel or csv files.</option>
+                        <option value="5">I will manually enter my data.</option>
+                    </select>
+                    <h3>How much data analysis do you plan to do in your visualization tool?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">I need to do extensive data processing.</option>
+                        <option value="2">I will do some data processing and am ok programming more extensive processing functions.</option>
+                        <option value="3">I will do some basic data processing.</option>
+                        <option value="4">I'm ok programming my data processing functions.</option>
+                        <option value="5">I don't need to do much data processing.</option>
+                    </select>
+                    <h3>How important is interactivity?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">I want fully customizable interactions within and between charts.</option>
+                        <option value="2">Basic interaction within and between charts is fine.</option>
+                        <option value="3">Interaction within charts is enough.</option>
+                        <option value="4">I'm ok faking interactivity with prototyping tricks.</option>
+                        <option value="5">Static charts are fine by me.</option>
+                    </select>
+                </div>
+                <div class="accessibility">
+                    <h2>Accessibility</h2>
+                    <h3>How web compatible does your visualization need to be?</h3>
+                    <select class="survey-options">
+                        <option value>...</option>
+                        <option value="1">Fully web compatible with editable source code.</option>
+                        <option value="2">It needs to be web compatible and I might want to mess with the source code.</option>
+                        <option value="3">I don't mind if the source code is inaccessible as long as it's web compatible.</option>
+                        <option value="4">It's ok if it is only web compatible with a lot of effort.</option>
+                        <option value="5">I don't need my visualization to be web compatible.</option>
+                    </select>
+                    <h3>How portable does your visualization need to be?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">Fully portable as vector graphic.</option>
+                        <option value="2">I'm willing to pay extra for a fully portable export graphic.</option>
+                        <option value="3">I'm ok with a non-vector image export.</option>
+                        <option value="4">I'm ok putting in a lot of effort if I need to export to a non-vector image.</option>
+                        <option value="5">I don't need to export my visualization.</option>
+                    </select>
+                    <h3>How important is securing your data visualization?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">I need to be able to control where my data goes and share securely.</option>
+                        <option value="2">I am ok building my own data security and sharing.</option>
+                        <option value="3">I am ok building my own data security and sharing and don't mind if my data is available to a third-party.</option>
+                        <option value="4">My data can be hosted by a third-party as long as I can share visualizations privately.</option>
+                        <option value="5">My data can be hosted by a third-party and I am willing to pay to share visualizations privately.</option>
+                    </select>
+                    <h3>How much data do you plan to visualize?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">I need fully performant big data visualizations.</option>
+                        <option value="2">I need to visualize big data, but I'm willing to work to optimize performance.</option>
+                        <option value="3">I need to visualize a large, but not huge, amount of data.</option>
+                        <option value="4">I will only need to visualize up to 5,000 rows.</option>
+                        <option value="5">I can manually enter my very small dataset.</option>
+                    </select>
+                </div>
             </div>
+            <button id="submit-button" disabled="true">
+                <i class="fas fa-wrench"></i>
+                Find My Tool
+            </button>
         </div>
     </div>
-    <div id="myModal" class="modal">
+    <div id="tool-modal" class="modal" style="display: none;">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img id="toolPic">
-            <h1 id="toolName"></h1>
+            <div class="container">
+                <div class="row">
+                    <img id="tool-pic" class="tool-pic" src="">
+                    <h1 id="tool-name" class="tool-name"></h1>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -84,30 +184,44 @@
         crossorigin="anonymous"></script>
     <script src="js/jquery.barrating.min.js"></script>
     <script type="text/javascript">
+        function getScores() {
+            const scores = $(".br-current").map(function () {
+                return $(this).data("ratingValue");
+            }).get();
+            return scores;
+        }
+
         $(function () {
-            $('#installation, #learning').barrating({
-                theme: "bars-movie"
+            $(".survey-options").barrating({
+                theme: "bars-movie",
+                onSelect: function (value, text, event) {
+                    if (typeof (event) !== 'undefined') {
+                        const surveyResults = getScores();
+                        if (surveyResults.length === 12) {
+                            $("#submit-button").removeAttr("disabled");
+                        }
+                    }
+                }
             });
         });
 
-        $("#find-button").on("click", function () {
-            const surveyResults = $(".br-current").map(function () {
-                return $(this).data("ratingValue");
-            }).get();
+        $("#submit-button").on("click", function () {
+            const surveyResults = getScores();
 
-            console.log(surveyResults);
             $.post("/api/tools", {
                 scores: surveyResults,
             }).then((data) => {
-                console.log(data);
-                $("#toolName").text(data.name);
-                $("#toolPic").attr("src", data.photo);
-                $("#myModal").toggle();
+                $("#tool-name").text(data.name);
+                $("#tool-pic").attr("src", data.logo);
+                $("#tool-modal").toggle();
             });
         });
 
         $(".close").on("click", function () {
-            $("#myModal").toggle();
+            $("#tool-modal").toggle();
+            $("select").barrating('clear');
+            $(document).scrollTop(0);
+            $("#submit-button").attr("disabled", "true");
         });
     </script>
 </body>

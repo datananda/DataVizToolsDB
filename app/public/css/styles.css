@@ -21,6 +21,16 @@ h3 {
     margin-bottom: 10px;
 }
 
+.tool-info,
+#submit-button {
+    margin-bottom: 45px;
+}
+
+.tool-info h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #636367;
+}
+
 .usability h2 {
     color: #2d4471;
     padding-bottom: 10px;
@@ -31,12 +41,51 @@ h3 {
     background-color: #c6cad6;
 }
 
-.usability .br-theme-bars-movie .br-widget a.br-active, .br-theme-bars-movie .br-widget a.br-selected {
+.usability .br-theme-bars-movie .br-widget a.br-active, 
+.usability .br-theme-bars-movie .br-widget a.br-selected {
     background-color: #2d4471;
 }
 
 .usability .br-theme-bars-movie .br-widget .br-current-rating {
     color: #2d4471;
+}
+
+.capability h2 {
+    color: #007172;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #007172;
+}
+
+.capability .br-theme-bars-movie .br-widget a {
+    background-color: #b8d2d3;
+}
+
+.capability .br-theme-bars-movie .br-widget a.br-active, 
+.capability .br-theme-bars-movie .br-widget a.br-selected {
+    background-color: #007172;
+}
+
+.capability .br-theme-bars-movie .br-widget .br-current-rating {
+    color: #007172;
+}
+
+.accessibility h2 {
+    color: #8d3232;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #8d3232;
+}
+
+.accessibility .br-theme-bars-movie .br-widget a {
+    background-color: #e0bfb7;
+}
+
+.accessibility .br-theme-bars-movie .br-widget a.br-active, 
+.accessibility .br-theme-bars-movie .br-widget a.br-selected {
+    background-color: #8d3232;
+}
+
+.accessibility .br-theme-bars-movie .br-widget .br-current-rating {
+    color: #8d3232;
 }
 
 nav {
@@ -71,7 +120,7 @@ nav ul li {
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
+    /* display: none; */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
@@ -86,10 +135,24 @@ nav ul li {
 /* Modal Content/Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+}
+
+.tool-pic {
+    width: 60px;
+    display: inline-block;
+    padding: 1.25rem;
+}
+
+.tool-name {
+    padding: 1.25rem 0;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 0;
 }
 
 /* The Close Button */
@@ -98,6 +161,7 @@ nav ul li {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    margin-top: -20px;
 }
 
 .close:hover,
@@ -111,13 +175,37 @@ nav ul li {
     width: 100%;
     padding: 0;
 }
+
+.tool-div {
+    border: 1px solid #e8e8e8;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.first-in-row {
+    margin-left: 0;
+}
+
+button[disabled] {
+    color: #bbb;
+}
+
+button[disabled]:hover {
+  border-color: #bbb;
+  outline: 0; 
+}
+
 /* Mobile first queries */
 
 /* Larger than mobile */
 @media (min-width: 400px) {}
 
 /* Larger than phablet */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    #submit-button {
+        width: 30.6666666667%;
+    }
+}
 
 /* Larger than tablet */
 @media (min-width: 750px) {}

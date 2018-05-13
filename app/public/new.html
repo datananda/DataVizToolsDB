@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DVTDB Add</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/bars-movie.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="row">
+                <a href="/" class="nav-brand">DVTDB</a>
+                <ul class="nav-links">
+                    <li>
+                        <a href="/find">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/tools">
+                            <i class="far fa-list-alt"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="far fa-plus-square"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1>Add a Tool</h1>
+        <div class="tool-info">
+            <h2>Tool Information</h2>
+            <div class="row">
+                <div class="six columns">
+                    <label for="tool-name-input">Tool Name</label>
+                    <input class="u-full-width" type="text" placeholder="My Tool" id="tool-name-input">
+                </div>
+                <div class="six columns">
+                    <label for="tool-logo-input">Tool Logo</label>
+                    <input class="u-full-width" type="text" placeholder="http://link-to-tool-logo.png" id="tool-logo-input">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">
+                <div class="usability">
+                    <h2>Usability</h2>
+                    <h3>How easy is the tool to install?</h3>
+                    <select class="survey-options">
+                        <option value>...</option>
+                        <option value="1">Automatic binary installation available for all OS.</option>
+                        <option value="2">Automatic binary installation only for certain OS.</option>
+                        <option value="3">Requires registration, internet connection, and a browser.</option>
+                        <option value="4">Binary distribution requiring additional set-up of libraries and packages.</option>
+                        <option value="5">Requires special file set-up and/or downloading libraries and packages.</option>
+                    </select>
+                    <h3>How easy is the tool to learn?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">No application to learn.</option>
+                        <option value="2">The tool is a simple application to learn.</option>
+                        <option value="3">The tool is a complex application to learn.</option>
+                        <option value="4">The tool is a unique programming language but offers plug-and-play examples.</option>
+                        <option value="5">The tool is a unique programming language to learn.</option>
+                    </select>
+                    <h3>How much support is there for the tool?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">Resources and support are provided by a large, established company.</option>
+                        <option value="2">Resources and support are provided by a small company.</option>
+                        <option value="3">The tool is open-source with a strong user community.</option>
+                        <option value="4">The tool offers many online resources.</option>
+                        <option value="5">There are few resources and no active support for the tool.</option>
+                    </select>
+                    <h3>How expensive is the tool?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">The tool is completely free.</option>
+                        <option value="2">The tool has a free option or an inexpensive flat monthly subscription.</option>
+                        <option value="3">The tool has a free option with a tiered monthly subscription.</option>
+                        <option value="4">The tool costs less than $1000 per license.</option>
+                        <option value="5">The tool costs more than $1000 per license.</option>
+                    </select>
+                </div>
+                <div class="capability">
+                    <h2>Capability</h2>
+                    <h3>How many different types of visualizations does the tool support?</h3>
+                    <select class="survey-options">
+                        <option value>...</option>
+                        <option value="1">The tool supports an infinite variety of visualizations.</option>
+                        <option value="2">The tool supports a virtually infinite variety of visualizations.</option>
+                        <option value="3">The tool supports 20 or more visualization types.</option>
+                        <option value="4">The tool supports between 10 and 20 visualization types.</option>
+                        <option value="5">The tool supports 10 or fewer visualization types.</option>
+                    </select>
+                    <h3>How many different data source connections does the tool offer?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">A wide variety of data source connections.</option>
+                        <option value="2">Automatic connection with text files, but additional data source connections can be programmed.</option>
+                        <option value="3">Automatic connection with csv or xls(x) files, but additional data source connections can be programmed.</option>
+                        <option value="4">csv or xls(x) connections only.</option>
+                        <option value="5">No data connections.</option>
+                    </select>
+                    <h3>How many data processing options does the tool offer?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">Extensive data processing options.</option>
+                        <option value="2">Some processing options built in and additional options can be programmed.</option>
+                        <option value="3">Some processing options built in.</option>
+                        <option value="4">Limited processing options built in, but more can be programmed in.</option>
+                        <option value="5">Few built-in data processing options.</option>
+                    </select>
+                    <h3>How interactive are the visualizations created by the tool?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">Fully customizable interactions within and between charts.</option>
+                        <option value="2">Interactive within and between charts with some customizability.</option>
+                        <option value="3">Interactive within charts.</option>
+                        <option value="4">Interactivity can be simulated with prototyping tricks.</option>
+                        <option value="5">Visualizations are static.</option>
+                    </select>
+                </div>
+                <div class="accessibility">
+                    <h2>Accessibility</h2>
+                    <h3>Are visualizations created by the tool web compatible?</h3>
+                    <select class="survey-options">
+                        <option value>...</option>
+                        <option value="1">Visualizations are web elements with transparent source code.</option>
+                        <option value="2">Visualizations are web elements with sometimes inaccessible source code.</option>
+                        <option value="3">Visualizations are web elements, but source code is inaccessible.</option>
+                        <option value="4">Visualizations can be web compatible with effort.</option>
+                        <option value="5">Visualizations are not web compatible.</option>
+                    </select>
+                    <h3>What export options does the tool provide to enable visualization portability?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">Can export as vector graphic (svg, eps, or pdf).</option>
+                        <option value="2">Can export as vector graphic, but it requires additional subscription.</option>
+                        <option value="3">Can export as non-vector image (png, bmp, or jpg).</option>
+                        <option value="4">Can export as non-vector image with effort.</option>
+                        <option value="5">No export available.</option>
+                    </select>
+                    <h3>How secure are data and visualizations in the tool?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">Data can be kept on-site and sharing is secured.</option>
+                        <option value="2">Data can be kept on-site and sharing is configurable.</option>
+                        <option value="3">Data might be moved to a third-party location.</option>
+                        <option value="4">Data is uploaded to the tool's server and sharing is private.</option>
+                        <option value="5">Data is uploaded to the tool's server and private sharing requires additional payment.</option>
+                    </select>
+                    <h3>How does the tool scale for large datasets?</h3>
+                    <select class="survey-options">
+                        <option value></option>
+                        <option value="1">The tool offers built-in connections to big data sources.</option>
+                        <option value="2">There are no inherent data size constraints, but performance takes optimization.</option>
+                        <option value="3">The tool supports a large data set, but there are inherent size constraints.</option>
+                        <option value="4">The tool supports up to about 5,000 rows of data.</option>
+                        <option value="5">The tool only supports manual data entry.</option>
+                    </select>
+                </div>
+            </div>
+            <button id="submit-button" disabled="true">
+                <i class="far fa-plus-square"></i>
+                Add New Tool
+            </button>
+        </div>
+    </div>
+    <div id="tool-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="container">
+                <div class="row">
+                    <h2 id="tool-name" class="tool-name">Thank you for submitting a tool to the data visualization tools database!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="../js/jquery.barrating.min.js"></script>
+    <script type="text/javascript">
+        function getInputs() {
+            const toolName = $("#tool-name-input").val().trim();
+            const toolLogo = $("#tool-logo-input").val().trim();
+            const scores = $(".br-current").map(function () {
+                return $(this).data("ratingValue");
+            }).get();
+            return {
+                name: toolName,
+                logo: toolLogo,
+                scores: scores,
+            };
+        }
+
+        $("#tool-name-input, #tool-logo-input").focusin(function () {
+            $(this).attr("placeholder", "");
+        });
+
+        $("#tool-name-input, #tool-logo-input").focusout(function () {
+            const inputs = getInputs();
+            if (inputs.scores.length === 12 && inputs.name !== "" && inputs.logo !== "") {
+                $("#submit-button").removeAttr("disabled");
+            }
+        });
+
+        $(function () {
+            $(".survey-options").barrating({
+                theme: "bars-movie",
+                onSelect: function (value, text, event) {
+                    if (typeof (event) !== "undefined") {
+                        const inputs = getInputs();
+                        if (inputs.scores.length === 12 && inputs.name !== "" && inputs.logo !== "") {
+                            $("#submit-button").removeAttr("disabled");
+                        }
+                    }
+                }
+            });
+        });
+
+        $("#submit-button").on("click", function () {
+            const inputs = getInputs();
+
+            $.post("/api/tools", inputs)
+                .then(() => {
+                    $("#tool-modal").toggle();
+                });
+        });
+
+        $(".close").on("click", function () {
+            $("#tool-modal").toggle();
+            $("select").barrating("clear");
+            $(document).scrollTop(0);
+            $("#submit-button").attr("disabled", "true");
+            $("#tool-name-input, #tool-logo-input").val("");
+            document.getElementById("tool-name-input").placeholder = "My Tool";
+            document.getElementById("tool-logo-input").placeholder = "http://link-to-tool-logo.png";
+        });
+    </script>
+</body>
+
+</html>
